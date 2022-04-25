@@ -1,0 +1,40 @@
+<section class="page-section" id="fusions">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="text-uppercase">Fusions</h2>
+            <h3>Cannot be used for fusions anymore</h3>
+            <ul class="list-unstyled card-columns">
+                <li *ngFor="let fused of alreadyFused">{{fused.name}}</li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <h3 class=>Overview of all fusions</h3>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image">
+                        <h4>
+                            To be
+                            <br />
+                            continued
+                            <br />
+                            June 2022
+                        </h4>
+                    </div>
+                </li>
+                <li *ngFor="let item of metaData; odd as isOdd; even as isEven;" [ngClass]="{timeline: isEven, timelineinverted: isOdd}">
+                    <div class="timeline-image"> <img class="rounded-circle img-fluid pointer" src="{{item.image_url}}"
+                            alt="..." (click)="openFusionModal(item)" /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>{{item.name}}</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p style="margin-bottom: 2rem;white-space:pre-wrap;">{{item.description |
+                                slice:0:200}} ...</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+.masthead {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    margin-top: 56px;
+    min-height: 500px;
+    text-align: center;
+    color: #fff;
+    background-image: url("../../../assets/img/bg/aswangheader.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+    background-size: cover;
+  }
