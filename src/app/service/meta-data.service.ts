@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core"
 })
 export class MetaDataService {
   getMetaData() {
-    return this.metaData
+    return this.metaData.sort((a,b) => a.openSeaId - b.openSeaId)
   }
 
   getMetaDataRandom() {
@@ -28,6 +28,19 @@ export class MetaDataService {
       return filteredChilds.length > 0
     });
     return alreadyFused.sort((a, b) => (b.name > a.name ? -1 : 1))
+  }
+
+  getMetaDataAswang() {
+    return this.metaData.filter(item => item.type=="ASWANG").sort((a,b) => a.openSeaId - b.openSeaId)
+  }
+  getMetaDataMaligno() {
+    return this.metaData.filter(item => item.type=="MALIGNO").sort((a,b) => a.openSeaId - b.openSeaId)
+  }
+  getMetaDataYokai() {
+    return this.metaData.filter(item => item.type=="YOKAI").sort((a,b) => a.openSeaId - b.openSeaId)
+  }
+  getMetaDataEngkanto() {
+    return this.metaData.filter(item => item.type=="ENGKANTO").sort((a,b) => a.openSeaId - b.openSeaId)
   }
 
   metaData:MetaData[] = [

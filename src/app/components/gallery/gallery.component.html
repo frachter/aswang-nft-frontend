@@ -1,0 +1,20 @@
+<section class="page-section" id="gallery">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="text-uppercase">Gallery</h2>
+            <h5> <a class="pointer" (click)="filterAll()">All</a> | <a class="pointer"
+                    (click)="filterAswang()">Aswang</a> | <a class="pointer" (click)="filterYokai()">Yokai</a> | <a
+                    class="pointer" (click)="filterMaligno()">Maligno</a> | <a class="pointer"
+                    (click)="filterEngkanto()">Engkanto</a></h5>
+        </div>
+        <div class="gallery">
+            <div class="item" *ngFor="let item of metaData | slice: (page-1) * pageSize : page * pageSize">
+                <div class="zoom-img" (click)="openFusionModal(item)">
+                    <img src="{{item.image_url}}">
+                </div>
+            </div>
+        </div>
+        <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="metaData.length"
+            class="d-flex justify-content-center"></ngb-pagination>
+    </div>
+</section>

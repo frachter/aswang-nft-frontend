@@ -18,17 +18,17 @@
                         </h4>
                     </div>
                 </li>
-                <li *ngFor="let item of metaData; odd as isOdd; even as isEven;"
+                <li class="pointer fusion-item" (click)="openFusionModal(item)" *ngFor="let item of metaData; odd as isOdd; even as isEven;"
                     [ngClass]="{timeline: isEven, timelineinverted: isOdd}">
                     <div class="timeline-image"> <img class="rounded-circle img-fluid pointer" src="{{item.image_url}}"
-                            alt="..." (click)="openFusionModal(item)" /></div>
+                            alt="{{item.name}}" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>{{item.name}}</h4>
                         </div>
                         <div class="timeline-body">
-                            <p style="margin-bottom: 2rem;white-space:pre-wrap;">{{item.description |
-                                slice:0:200}} ...</p>
+                            <p style="margin-bottom: 0.5rem;white-space:pre-wrap;">{{item.description |
+                                slice:0:200}} ... </p>
                         </div>
                     </div>
                 </li>

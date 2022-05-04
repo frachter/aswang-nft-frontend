@@ -3,15 +3,17 @@
 </div>
 <div class="modal-body">
     <div class="row">
-        <div class="col-8">
-            <img class="card-img-top" src="{{item.image_url}}" alt="{{item.name}}">
+        <div class="col ">
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top" src="{{item.image_url}}" alt="{{item.name}}" style="max-width:730px;">
+            </div>
             <div class="card-body">
                 <p class="card-text" style="margin-bottom: 2rem;white-space:pre-wrap;">{{item.description}}</p>
             </div>
         </div>
-        <div class="col">
+        <div class="col-lg-4" *ngIf="item.fusion.length > 0">
             <h5>Parents</h5>
-            <div class="row parent-row" *ngFor="let parent of parents">
+            <div class="row parent-row" *ngFor="let parent of parents" (click)="updateItem(parent)">
                 <h6>{{parent.name}}</h6>
                 <img class="card-img-top" src="{{parent.image_url}}" alt="{{parent.name}}">
             </div>

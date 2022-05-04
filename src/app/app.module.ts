@@ -10,6 +10,7 @@ import { DescriptionComponent } from './components/description/description.compo
 import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FusionDetailComponent } from './components/fusion-detail/fusion-detail.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FusionDetailComponent } from './components/fusion-detail/fusion-detail.
     DescriptionComponent,
     FooterComponent,
     FusionDetailComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
