@@ -1,11 +1,8 @@
 <section class="page-section" id="fusions">
     <div class="container">
+
         <div class="text-center">
             <h2 class="text-uppercase">Fusions</h2>
-            <h3>Cannot be used for fusions anymore</h3>
-            <ul class="list-unstyled card-columns">
-                <li *ngFor="let fused of alreadyFused">{{fused.name}}</li>
-            </ul>
         </div>
         <div class="text-center">
             <h3 class=>Overview of all fusions</h3>
@@ -21,7 +18,8 @@
                         </h4>
                     </div>
                 </li>
-                <li *ngFor="let item of metaData; odd as isOdd; even as isEven;" [ngClass]="{timeline: isEven, timelineinverted: isOdd}">
+                <li *ngFor="let item of metaData; odd as isOdd; even as isEven;"
+                    [ngClass]="{timeline: isEven, timelineinverted: isOdd}">
                     <div class="timeline-image"> <img class="rounded-circle img-fluid pointer" src="{{item.image_url}}"
                             alt="..." (click)="openFusionModal(item)" /></div>
                     <div class="timeline-panel">
@@ -34,6 +32,12 @@
                         </div>
                     </div>
                 </li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <h3>Cannot be used for fusions anymore</h3>
+            <ul class="list-unstyled card-columns">
+                <li *ngFor="let fused of alreadyFused">{{fused.name}}</li>
             </ul>
         </div>
     </div>

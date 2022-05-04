@@ -4,7 +4,7 @@ import { MetaDataService } from 'src/app/service/meta-data.service';
 @Component({
   selector: 'app-fusion-detail',
   templateUrl: './fusion-detail.component.html',
-  styleUrls: ['./fusion-detail.component.css']
+  styleUrls: ['./fusion-detail.component.scss']
 })
 export class FusionDetailComponent implements OnInit {
   @Input() public item:MetaData = {

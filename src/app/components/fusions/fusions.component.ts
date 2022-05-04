@@ -6,7 +6,7 @@ import { FusionDetailComponent } from '../fusion-detail/fusion-detail.component'
 @Component({
   selector: 'app-fusions',
   templateUrl: './fusions.component.html',
-  styleUrls: ['./fusions.component.css'],
+  styleUrls: ['./fusions.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class FusionsComponent implements OnInit {
