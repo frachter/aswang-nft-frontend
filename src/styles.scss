@@ -1,17 +1,38 @@
 @import 'https://fonts.googleapis.com/css?family=MedievalSharp';
 
+html{
+  cursor: url("./assets/img/bg/cursor.png"), pointer;
+}
+
+.pointer {
+  cursor: url("./assets/img/bg/cursor-click.png"), pointer;
+}
+
+.button{
+  cursor: url("./assets/img/bg/cursor-click.png"), pointer;
+}
+.btn-close{
+  cursor: url("./assets/img/bg/cursor-click.png"), pointer !important;
+}
+
+a{
+  cursor: url("./assets/img/bg/cursor-click.png"), pointer;
+}
+
+.carousel-control-next{
+  cursor: url("./assets/img/bg/cursor-click.png"), pointer !important;
+}
+
+.carousel-control-prev{
+  cursor: url("./assets/img/bg/cursor-click.png"), pointer !important;
+}
+
 
 /* You can add global styles to this file, and also import other style files */
 .page-section {
   background-color: #618698;
   color: #fff;
   padding: 6rem 0;
-
-
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 .carousel-control-prev-icon {
@@ -32,13 +53,11 @@ h3 {
 a {
   color: rgb(255, 255, 255) !important;
   background-color: transparent;
-  text-decoration: none;
 }
 
 a:link {
   color: rgb(255, 255, 255) !important;
   background-color: transparent;
-  text-decoration: none;
 }
 
 
@@ -54,7 +73,23 @@ ngb-pagination .page-item.disabled .page-link {
   background-color: rgba(255, 255, 255, 0.185)
 }
 
+.text-center{
+	font-family: MedievalSharp;
+}
 
+.nav-link{
+	font-family: MedievalSharp;
+}
+.nav-link-home{
+	font-family: MedievalSharp;
+}
+.footer{
+	font-family: MedievalSharp;
+}
+
+.a.href{
+
+}
 .modal-content{
   background-color: #fff0 !important;
   border: 0px solid rgba(0, 0, 0, 0.2) !important; 

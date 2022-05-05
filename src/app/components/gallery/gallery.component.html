@@ -9,7 +9,7 @@
         </div>
         <div class="gallery">
             <div class="item" *ngFor="let item of metaData | slice: (page-1) * pageSize : page * pageSize">
-                <div class="zoom-img" (click)="openFusionModal(item)">
+                <div class="zoom-img pointer" (click)="openFusionModal(item)">
                     <img src="{{item.image_url}}">
                 </div>
             </div>

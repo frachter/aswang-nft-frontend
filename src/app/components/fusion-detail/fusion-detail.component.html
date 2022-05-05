@@ -1,6 +1,6 @@
 <div class="modal-header">
     <h4 class="modal-title">{{item.name}}</h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+    <button type="button" class="btn-close pointer" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
 
 </div>
 <div class="modal-body">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-lg-4" *ngIf="item.fusion.length > 0">
             <h5>Parents</h5>
-            <div class="row parent-row" *ngFor="let parent of parents" (click)="updateItem(parent)">
+            <div class="row parent-row pointer" *ngFor="let parent of parents" (click)="updateItem(parent)">
                 <h6>{{parent.name}}</h6>
                 <img class="card-img-top" src="{{parent.image_url}}" alt="{{parent.name}}">
             </div>
