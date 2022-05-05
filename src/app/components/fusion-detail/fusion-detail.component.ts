@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core"
 import { MetaDataService } from "src/app/service/meta-data.service"
+import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: "app-fusion-detail",
@@ -20,7 +21,7 @@ export class FusionDetailComponent implements OnInit {
   }
   parents: MetaData[] = []
 
-  constructor(private metaDataService: MetaDataService) {}
+  constructor(private metaDataService: MetaDataService, public activeModal: NgbActiveModal) {}
 
   ngOnInit(): void {
     this.parents = this.metaDataService.getMetaDataFusionParents(this.item)
