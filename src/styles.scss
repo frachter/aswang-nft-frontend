@@ -71,7 +71,8 @@ ngb-pagination .page-item.disabled .page-link {
   padding-right: 10px !important;
   padding-left: 10px !important;
   margin: 0;
-  margin-right: 2px!important;
+  margin-right: 7px!important;
+  margin-left: 10px!important;
   border: 0 !important;
   .btn-close{
     padding-top: 20px !important;
@@ -87,7 +88,8 @@ ngb-pagination .page-item.disabled .page-link {
   background-image: url("./assets/img/bg/scroll-center.gif");
   background-size: 100% 100%;
   margin: 0;
-  margin-left: 1px!important;
+  margin-left: 11px!important;
+  margin-right: 7px!important;
   border: 0 !important;
 }
 
@@ -100,15 +102,12 @@ ngb-pagination .page-item.disabled .page-link {
 
 
 .modal-footer{
-  padding-top: 10px !important;
-  padding-right: 100px !important;
-  padding-left: 100px !important;
   background-color: transparent;
   background-image: url("./assets/img/bg/scroll-bottom.gif");
   background-size: 100% 100%;
   margin: 0;
-  margin-left: -10px!important;
-  margin-right: -5px!important;
+  // margin-left: -10px!important;
+  // margin-right: -5px!important;
   padding: 50px!important;
   border: 0 !important;
 }
