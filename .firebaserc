@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "aswang"
-  }
+    "default": "aswang-dev",
+    "prod": "aswang",
+    "dev": "aswang-dev"
+  },
+  "targets": {}
 }
