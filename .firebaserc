@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "aswang-dev",
+    "default": "aswang",
     "prod": "aswang",
     "dev": "aswang-dev"
   },
