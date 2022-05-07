@@ -5,7 +5,7 @@
 </div>
 <div class="modal-body">
     <div class="row">
-        <div class="col ">
+        <div class="col">
             <div class="d-flex justify-content-center">
                 <img class="card-img-top" src="{{item.image_url}}" alt="{{item.name}}" style="max-width:730px;">
             </div>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="col-lg-4" *ngIf="item.fusion.length > 0">
-            <h5>Parents</h5>
+            <h5>Fused from</h5>
             <div class="row parent-row pointer" *ngFor="let parent of parents" (click)="updateItem(parent)">
                 <h6>{{parent.name}}</h6>
                 <img class="card-img-top" src="{{parent.image_url}}" alt="{{parent.name}}">
