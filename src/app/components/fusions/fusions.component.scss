@@ -2,6 +2,18 @@
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
 
+.plus {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size:xx-large;
+}
+
+.fusion-mechanic{  
+  position: relative;
+  text-align: center;
+}
+
 .card-columns {
   text-align: left;
   @include media-breakpoint-up(sm) {column-count: 2;}

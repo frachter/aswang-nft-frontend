@@ -4,8 +4,34 @@
         <div class="text-center">
             <h2 class="text-uppercase">Fusions</h2>
         </div>
+    </div>
+
+    <div class="container">
         <div class="text-center">
-            <h3 class=>Overview of all fusions</h3>
+            <h3 class=>Mechanics</h3>
+            <p>
+                Sansi...? is home to seven types of creatures. These are Aswang, Yokai, Maligno, Halimaw, Engkanto and
+                two yet to be discovered.<br>
+                From time to time two individuals find each other and a new creature is born by the hands of the mighty
+                ogassi. This process is called a fusion. <br>
+                The master of the creatures can send their two chosen ones into the raffle land where they might go into
+                the fusion process.<br>
+                Yokais appear all around Sansi...? It's said that these find their way to collectors, which won one of
+                the Aswang Games.
+            </p>
+            <h4>Maligno</h4>
+            <p>🔲 1 Aswang + 1 Aswang = 1 Maligno</p>
+            <p>see an example below:</p>
+            <img src="./../../../assets/img/fusion/maligno1.png" alt="Maligno" width="100%">
+            <h4>Engkanto</h4>
+            <p>🔲 1 Maligno + 1 Maligno = 1 Engkanto</p>
+            <p>see an example below:</p>
+            <img src="./../../../assets/img/fusion/engkanto1.png" alt="Engkanto" width="100%">
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center">
+            <h3 class=>Fusion history</h3>
             <ul class="timeline">
                 <li>
                     <div class="timeline-image">
@@ -13,12 +39,13 @@
                             To be
                             <br />
                             continued
-                            <br />
-                            June 2022
+                            <br /> ...
+                            
                         </h4>
                     </div>
                 </li>
-                <li class="pointer fusion-item" (click)="openFusionModal(item)" *ngFor="let item of metaData; odd as isOdd; even as isEven;"
+                <li class="pointer fusion-item" (click)="openFusionModal(item)"
+                    *ngFor="let item of metaData; odd as isOdd; even as isEven;"
                     [ngClass]="{timeline: isEven, timelineinverted: isOdd}">
                     <div class="timeline-image"> <img class="rounded-circle img-fluid pointer" src="{{item.image_url}}"
                             alt="{{item.name}}" /></div>
@@ -34,6 +61,9 @@
                 </li>
             </ul>
         </div>
+
+    </div>
+    <div class="container">
         <div class="text-center">
             <h3>Cannot be used for fusions anymore</h3>
             <ul class="list-unstyled card-columns">

@@ -4,23 +4,23 @@ import { Injectable } from "@angular/core"
   providedIn: "root"
 })
 export class MetaDataService {
-  getMetaData() {
+  getMetaData():MetaData[] {
     return this.metaData.sort((a,b) => a.openSeaId - b.openSeaId)
   }
 
-  getMetaDataRandom() {
+  getMetaDataRandom():MetaData[] {
     return this.metaData.sort(() => Math.random() - 0.5)
   }
 
-  getMetaDataOnlyFusion() {
+  getMetaDataOnlyFusion():MetaData[] {
     return this.metaData.filter(item => item.fusion.length > 0).sort((a,b) => b.openSeaId - a.openSeaId)
   }
 
-  getMetaDataFusionParents(child:MetaData) {
+  getMetaDataFusionParents(child:MetaData):MetaData[] {
     return this.metaData.filter(item => item.characterName == child.fusion[0] || item.characterName == child.fusion[1]).sort((a,b) => b.openSeaId - a.openSeaId)
   }
 
-  getAlreadyFused() {
+  getAlreadyFused():MetaData[] {
     const allItems = this.getMetaData()
     const fusions = this.getMetaDataOnlyFusion()
     const alreadyFused = allItems.filter(item => {
@@ -30,17 +30,21 @@ export class MetaDataService {
     return alreadyFused.sort((a, b) => (b.name > a.name ? -1 : 1))
   }
 
-  getMetaDataAswang() {
+  getMetaDataAswang():MetaData[] {
     return this.metaData.filter(item => item.type=="ASWANG").sort((a,b) => a.openSeaId - b.openSeaId)
   }
-  getMetaDataMaligno() {
+  getMetaDataMaligno():MetaData[] {
     return this.metaData.filter(item => item.type=="MALIGNO").sort((a,b) => a.openSeaId - b.openSeaId)
   }
-  getMetaDataYokai() {
+  getMetaDataYokai():MetaData[] {
     return this.metaData.filter(item => item.type=="YOKAI").sort((a,b) => a.openSeaId - b.openSeaId)
   }
-  getMetaDataEngkanto() {
+  getMetaDataEngkanto():MetaData[] {
     return this.metaData.filter(item => item.type=="ENGKANTO").sort((a,b) => a.openSeaId - b.openSeaId)
+  }
+
+  getMetaDataByName(name:string):MetaData {
+    return this.metaData.find(item => item.characterName == name) as MetaData
   }
 
   metaData:MetaData[] = [
