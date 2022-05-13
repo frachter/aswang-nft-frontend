@@ -8,16 +8,21 @@
       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <!-- #1 -->
-          <div class="carousel-item" *ngFor="let item of metaData;let index = index;let isFirst = first" [ngClass]="{active:isFirst}" data-bs-interval="3000">
+          <div
+            class="carousel-item"
+            *ngFor="let item of metaData; let index = index; let isFirst = first"
+            [ngClass]="{ active: isFirst }"
+            data-bs-interval="3000"
+          >
             <div class="row justify-content-center">
               <div class="col-12 col-lg col-md-12 col-sm-12 col-xs-12">
-                <img src="{{item.image_url}}" alt="{{item.name}}" width="100%">
+                <img src="{{ item.image_url }}" alt="{{ item.name }}" width="100%" />
               </div>
               <div class="col-12 col-lg col-md-12 col-sm-12 col-xs-12">
                 <div class="d-block">
-                  <h4 class="section-heading text-uppercase">{{item.name}}</h4>
-                  <p style="margin-bottom: 2rem;white-space:pre-wrap;text-align: left;">{{item.description}}</p>
-              </div>
+                  <h4 class="section-heading text-uppercase">{{ item.name }}</h4>
+                  <p style="margin-bottom: 2rem; white-space: pre-wrap; text-align: left">{{ item.description }}</p>
+                </div>
               </div>
             </div>
           </div>

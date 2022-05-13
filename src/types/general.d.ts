@@ -4,7 +4,7 @@ interface MetaData {
   type: string
   typeCharId: number
   description: string
-  fusion: string[],
+  fusion: string[]
   tokenId: number
   openSeaId: number
   image_url: string

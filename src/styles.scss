@@ -1,6 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=MedievalSharp';
+@import "https://fonts.googleapis.com/css?family=MedievalSharp";
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 html {
   cursor: url("./assets/img/bg/cursor.png"), pointer;
@@ -30,7 +30,6 @@ a {
   cursor: url("./assets/img/bg/cursor-click.png"), pointer !important;
 }
 
-
 /* You can add global styles to this file, and also import other style files */
 .page-section {
   background-color: #618698;
@@ -46,18 +45,15 @@ a {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fffff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
-
 h3 {
   margin-bottom: 1em !important;
   margin-top: 1.5em !important;
 }
 
-
 h4 {
   margin-bottom: 0.5em !important;
   margin-top: 1em !important;
 }
-
 
 a {
   color: rgb(255, 255, 255) !important;
@@ -69,7 +65,6 @@ a:link {
   background-color: transparent;
 }
 
-
 ngb-pagination .page-item.active .page-link {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.185);
@@ -79,7 +74,7 @@ ngb-pagination .page-item.active .page-link {
 ngb-pagination .page-item.disabled .page-link {
   visibility: hidden;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.185)
+  background-color: rgba(255, 255, 255, 0.185);
 }
 
 .text-center {
@@ -103,7 +98,6 @@ ngb-pagination .page-item.disabled .page-link {
   border: 0px solid rgba(0, 0, 0, 0.2) !important;
   font-family: MedievalSharp;
 }
-
 
 .modal-header {
   background-color: transparent;
@@ -146,7 +140,7 @@ ngb-pagination .page-item.disabled .page-link {
   background-image: url("./assets/img/bg/scroll-center.gif");
   background-size: 100% 100%;
   border: 0 !important;
-  
+
   @include media-breakpoint-up(xl) {
     // padding-right: 10% !important;
     // padding-left: 10% !important;
@@ -167,7 +161,7 @@ ngb-pagination .page-item.disabled .page-link {
     margin-left: 11px !important;
     margin-right: 8px !important;
   }
-  
+
   @include media-breakpoint-up(xs) {
     padding-right: 10% !important;
     padding-left: 10% !important;

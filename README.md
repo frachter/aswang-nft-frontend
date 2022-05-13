@@ -1,6 +1,6 @@
 # Aswang
 
-This website https://aswang.web.app/ was created as a community project for AswangNFT 
+This website https://aswang.web.app/ was created as a community project for AswangNFT
 
 # Angular / NodeJs
 
@@ -29,4 +29,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Note
+
 Added bootstrap js manually to src/index.html because carousel wass not working properly.
