@@ -1,6 +1,6 @@
 # Aswang
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+This website https://aswang.web.app/ was created as a community project for AswangNFT 
 
 # Angular / NodeJs
 
