@@ -23,4 +23,5 @@ export class FusionsComponent implements OnInit {
     const modalRef = this.modalService.open(FusionDetailComponent, { centered: true, size: "xl" })
     modalRef.componentInstance.item = item
   }
+
 }

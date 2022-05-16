@@ -10,11 +10,15 @@ html {
   cursor: url("./assets/img/bg/cursor-click.png"), pointer;
 }
 
-.button {
+.btn {
   cursor: url("./assets/img/bg/cursor-click.png"), pointer;
 }
 
 .btn-close {
+  cursor: url("./assets/img/bg/cursor-click.png"), pointer !important;
+}
+
+.btn-primary {
   cursor: url("./assets/img/bg/cursor-click.png"), pointer !important;
 }
 

@@ -10,13 +10,23 @@ import { FusionDetailComponent } from "../fusion-detail/fusion-detail.component"
 })
 export class GalleryComponent implements OnInit {
   metaData: MetaData[] = []
+  metaDataOwner: MetaData[] = []
+  isErrorOpensea: boolean = false
   alreadyFused: MetaData[] = []
   page: number = 1
   pageSize: number = 20
   constructor(private metaDataService: MetaDataService, private modalService: NgbModal) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.metaData = this.metaDataService.getMetaData()
+    try {
+      this.metaDataOwner = await this.metaDataService.getMetaDataByOwnerAddress("0x8899d0deDBb6ddd065E0Fc1e7b3aaed9bC5D0EbD")
+      this.isErrorOpensea = false
+    } catch (error) {
+      console.error("couldn't fetch Owners Assets from OpenSea", error)
+      this.metaDataOwner = []
+      this.isErrorOpensea = true
+    }
   }
 
   filterAll(): void {

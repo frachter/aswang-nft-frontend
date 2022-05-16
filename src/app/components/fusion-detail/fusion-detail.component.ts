@@ -15,7 +15,7 @@ export class FusionDetailComponent implements OnInit {
     typeCharId: 0,
     description: "",
     fusion: [],
-    tokenId: 0,
+    tokenId: "",
     openSeaId: 0,
     image_url: ""
   }
