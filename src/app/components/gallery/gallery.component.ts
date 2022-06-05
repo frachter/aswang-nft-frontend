@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core"
 import { MetaDataService } from "src/app/service/meta-data.service"
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap"
 import { FusionDetailComponent } from "../fusion-detail/fusion-detail.component"
+import { AuthenticateService } from "src/app/service/authenticate.service"
 
 @Component({
   selector: "app-gallery",
@@ -15,12 +16,14 @@ export class GalleryComponent implements OnInit {
   alreadyFused: MetaData[] = []
   page: number = 1
   pageSize: number = 20
-  constructor(private metaDataService: MetaDataService, private modalService: NgbModal) {}
+  ownerAddress:string = ""
+  constructor(private metaDataService: MetaDataService, private authenticateService: AuthenticateService, private modalService: NgbModal) {}
 
   async ngOnInit(): Promise<void> {
     this.metaData = this.metaDataService.getMetaData()
     try {
-      this.metaDataOwner = await this.metaDataService.getMetaDataByOwnerAddress("0x8899d0deDBb6ddd065E0Fc1e7b3aaed9bC5D0EbD")
+      this.ownerAddress = this.authenticateService.getAccount()
+      this.metaDataOwner = await this.metaDataService.getMetaDataByOwnerAddress(this.ownerAddress)
       this.isErrorOpensea = false
     } catch (error) {
       console.error("couldn't fetch Owners Assets from OpenSea", error)
